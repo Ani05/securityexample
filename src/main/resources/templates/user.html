@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+Welcome <span th:text="${users.name}"></span> | <a href="/logout">Logout</a><br>
+<span th:text="${users.picUrl}"></span><br>
+All Users:
+<table>
+    <tr th:each="user:${users}">
+        <td th:text="${users.name}"></td>
+        <td th:text="${users.surname}"></td>
+        <td><img width="50" th:if="${users.picUrl != null}" th:src="@{/post/getImage(picUrl=${users.picUrl})}"></td>
+    </tr>
+    </table>
+</body>
+</html>

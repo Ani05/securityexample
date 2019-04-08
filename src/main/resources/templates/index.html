@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<a href="/user">User Page</a> | <a href="/admin">Admin Page</a> <br>
+
+<form action="/register" method="post" enctype="multipart/form-data">
+
+    <input name="name" type="text" placeholder="name"> <br>
+    <input name="surname" type="text" placeholder="name"> <br>
+    <input name="email" type="text" placeholder="name"> <br>
+    <input name="password" type="password" placeholder="password"> <br>
+       userType: <select name="userType">
+    <option value="ADMIN">ADMIN</option>
+    <option value="USER">USER</option>
+</select><br>
+    <input type="file" name="picture"><br>
+    <input type="submit" value="Register"> <br>
+
+
+</form>
+
+
+</body>
+</html>
